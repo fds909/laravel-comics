@@ -23,3 +23,18 @@ Route::get('/comics', function() {
     
     return view('comics', ['comics' => $comics]);
 })->name('comics');
+
+Route::get('/comics/{id}', function ($id) {
+
+    $comics = config('comics');
+    
+    // validazione
+    if ( is_numeric($id) && $id < count($comics) && $id >= 0) {
+        $comic = $comics[$id];
+
+        return view('comic', ['singleComic' => $comic]);
+    } else {
+        abort(404);
+    }
+
+})->name('comic');

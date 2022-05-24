@@ -12,10 +12,12 @@
 
       <!-- Products -->
       <div class="row">
-        @foreach ( $comics as $comic )
+        @foreach ( $comics as $key => $comic )
           <div class="card">
-            <img src="{{ $comic['thumb'] }}" alt="">
-            <div class="title">{{ $comic['title'] }}</div>
+            <a href=" {{ route( 'comic', [ 'id' => $key ] ) }} ">
+              <img src="{{ $comic['thumb'] }}" alt="">
+              <div class="title">{{ $comic['title'] }}</div>
+            </a>
           </div>
         @endforeach
       </div>
