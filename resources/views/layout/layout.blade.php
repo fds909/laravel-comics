@@ -19,8 +19,10 @@
 
   <!-- MAIN -->
   <main>
-
+    @yield('content')
   </main>
+
+  @include('partials.blueMenu')
 
   <!-- FOOTER -->
   @include('partials.footer')

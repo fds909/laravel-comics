@@ -20,7 +20,6 @@ Route::get('/', function () {
 Route::get('/comics', function() {
 
     $comics = config('comics');
-    dump($comics);
     
     return view('comics', ['comics' => $comics]);
 })->name('comics');

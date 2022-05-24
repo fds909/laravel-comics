@@ -23,7 +23,7 @@
               <a href="">CHARACTERS</a>
             </li>
             <li>
-              <a href="">COMICS</a>
+              <a href=" {{ route('comics') }} ">COMICS</a>
             </li>
             <li>
               <a href="">MOVIES</a>
